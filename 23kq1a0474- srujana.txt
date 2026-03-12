@@ -1,0 +1,98 @@
+  *  hello word program:
+ print("Hello, Python!")
+
+*  using variables and data types :
+name = "Riya"
+age = 20
+print(name, age)
+
+* conditional logic :
+marks = 75
+if marks >= 50:
+    print("Pass")
+else:
+    print("Fail")
+
+*  looping through a list:
+fruits = ["apple", "banana", "mango"]
+for fruit in fruits:
+    print(fruit)
+
+* defining and calling a function :
+def greet(name):
+    return "Hello " + name
+print(greet("Sam"))
+ 
+*  two sum :
+def two_sum(nums, target):
+    d = {}
+    for i, n in enumerate(nums):
+        if target - n in d:
+            return [d[target - n], i]
+        d[n] = i
+nums = [2, 7, 11, 15]
+print(two_sum(nums, 9))
+
+*  Reverse a string :
+def reverse_string(s):
+    return s[::-1]
+print(reverse_string("python"))
+
+*  check palindrome :
+def is_palindrome(s):
+    return s == s[::-1]
+print(is_palindrome("madam"))
+
+* Anagram check :
+def is_anagram(s1, s2):
+    return sorted(s1) == sorted(s2)
+print(is_anagram("listen", "silent"))
+
+* second largest number :
+def second_largest(arr):
+    arr = list(set(arr))
+    arr.sort()
+    return arr[-2]
+print(second_largest([10, 20, 4, 45, 99]))
+
+* prime number check :
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+print(is_prime(29))
+
+* Remove duplicates from list :
+def remove_duplicates(arr):
+    return list(set(arr))
+print(remove_duplicates([1,2,2,3,4,4,5]))
+
+* Count vowels in string :
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for ch in s:
+        if ch in vowels:
+            count += 1
+    return count
+print(count_vowels("Hello World"))
+
+* Largest element in array :
+def largest(arr):
+    max_val = arr[0]
+    for num in arr:
+        if num > max_val:
+            max_val = num
+    return max_val
+print(largest([3, 7, 2, 9, 4]))
+
+* Fabanoccis series :
+ def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+fibonacci(10)
